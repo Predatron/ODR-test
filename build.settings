@@ -1,0 +1,101 @@
+
+settings =
+{
+        splashScreen = 
+        {
+            enable = false
+        },
+        
+        orientation =
+        {
+                --default = "portrait",
+                default = "landscapeRight",
+                --content = "portrait",
+                supported =
+                {
+                        --"portrait", "landscapeLeft", "landscapeRight"
+                        --"landscape"
+                        "landscapeLeft", "landscapeRight"
+                }
+        },
+        
+        iphone =
+        {
+                
+                xcassets = "Images.xcassets",
+                
+                onDemandResources =
+                {
+                    cw_preview = "cardwordz_preview.mp4",
+                    combo_ad = "combinations_ad.mp4",
+                },
+                
+                plist =
+                {
+                        
+                        NSPhotoLibraryUsageDescription = "This app would like to access the photo library.",
+                        NSCameraUsageDescription = "This app would like to access the camera.",
+                        ITSAppUsesNonExemptEncryption = false,
+                        UIPrerenderedIcon = true,
+                        UIStatusBarHidden = true,
+                        UILaunchStoryboardName = "LaunchScreen",
+                        
+                        --CFBundleURLSchemes =
+                        --{
+                        --    "CardWordz",
+                        --    "wordweb",
+                        --},
+                        UIRequiredDeviceCapabilities =
+                        {
+                            ["arm64"] = true,
+                        },
+                        LSApplicationQueriesSchemes =
+                        {
+                            "wordweb",
+                        },
+                        
+                        CFBundleLocalizations =
+                        {
+                            "English"
+                        },
+                        
+                        MinimumOSVersion = "14.0",
+                        
+                },
+                
+        },
+        
+        android =
+        {
+            
+            versionCode = "10",
+            isGame = true,
+            largeHeap = true,
+            allowAppsReadOnlyAccessToFiles = false,
+            
+            usesPermissions =
+            {
+                "android.permission.INTERNET",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                "com.android.vending.BILLING",
+            },
+            
+            supportsScreens =
+            {
+                smallScreens  = true,
+                normalScreens = true,
+                largeScreens  = true,
+                xlargeScreens = true,
+            },
+            
+        },
+        
+        plugins =
+        {
+                
+            ["plugin.onDemandResources"] = {
+                publisherId = "com.coronalabs",
+            },
+           
+        },
+}
